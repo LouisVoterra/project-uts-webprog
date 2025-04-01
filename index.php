@@ -6,7 +6,10 @@
     <title>Tugas Web Programming</title>
 </head>
 <body>
-    <a href="hasil.php" ><button>Lihat Hasill</button></a>
-    <a href="setting.php" ><button>Lihat Setting</button></a>
+    <!-- <a href="hasil.php" ><button>Lihat Hasill</button></a>
+    <a href="setting.php" ><button>Lihat Setting</button></a> -->
+    
+    <button onclick="location.href='hasil.php'">Lihat Hasil</button>
+    <button onclick="location.href='setting.php'">Lihat Setting</button>
 </body>
 </html>
