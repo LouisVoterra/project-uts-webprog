@@ -1,9 +1,7 @@
 <?php
-$text_align = $_POST['text-align'] ?? 'left';  // Default left jika tidak ada parameter
-$font_family = $_POST['font-family'] ?? 'Arial';  // Default Arial jika tidak ada parameter
-$color = $_POST['color'] ?? '#000000';  // Default black jika tidak ada parameter
-
-// Menyusun CSS berdasarkan pengaturan yang diterima
+$text_align = $_COOKIE['text-align'] ?? 'left';
+$font_family = $_COOKIE['font-family'] ?? 'Arial';
+$color = $_COOKIE['color'] ?? '#000000';
 $css = "text-align: $text_align; font-family: $font_family; color: $color;";
 ?>
 
