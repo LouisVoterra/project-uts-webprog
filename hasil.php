@@ -1,8 +1,14 @@
 <?php
 $text_align = $_COOKIE['text-align'] ?? 'left';
-$font_family = $_COOKIE['font-family'] ?? 'Arial';
+$font_family = $_COOKIE['font-family'] ?? 'arial';
 $color = $_COOKIE['color'] ?? '#000000';
+$tampilan = "p {
+text-align: $text_align; 
+font-family: $font_family; 
+color: $color;      
+}";
 $css = "text-align: $text_align; font-family: $font_family; color: $color;";
+
 ?>
 
 <!DOCTYPE html>
@@ -23,13 +29,13 @@ $css = "text-align: $text_align; font-family: $font_family; color: $color;";
     <br>
     <br>
     <h2>Setting yang tersedia:</h2>
-    <textarea rows="4" cols="50"><?= $css?></textarea>
+    <textarea readonly rows="5" cols="50"><?= $tampilan?></textarea>
     <br>
     <a href="setting.php" >Ganti Setting</a>
     <br>
     <br>
     <h3>Contoh Paragraf</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non repellendus earum reprehenderit laudantium! Omnis, possimus est. Officia maiores minus suscipit unde, provident nobis aut delectus molestiae eos, neque, reiciendis officiis!</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores facilis impedit culpa facere omnis voluptatum minus, quae quia modi iste quibusdam veritatis illum consequuntur velit maxime deserunt eaque magnam fuga est officiis eveniet. Vero necessitatibus voluptatum laudantium, commodi, aut esse maiores explicabo perspiciatis, ipsum dolores illum voluptates sed culpa reiciendis beatae repudiandae quod! Rerum porro eligendi et, excepturi perferendis aspernatur error deleniti veniam necessitatibus at debitis quae quisquam rem pariatur tempore laudantium iure nihil repellat commodi id dolorem voluptatibus impedit omnis! Veniam doloribus beatae magni possimus. Perferendis expedita obcaecati aliquam saepe tempora libero, dignissimos magnam beatae nihil laudantium eveniet ad.</p>
     
 
 </body>

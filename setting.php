@@ -30,10 +30,10 @@
         <label>Text-align: </label> 
         <select name="text-align" id="text-align">  
             <option>-- Pilih Text Align --</option>
-            <option value="Left" <?= $text_align == 'Left' ? 'selected' : '' ?>>Left</option>
-            <option value="Right" <?= $text_align == 'Right' ? 'selected' : '' ?>>Right</option>
-            <option value="Center" <?= $text_align == 'Center' ? 'selected' : '' ?>>Center</option>
-            <option value="Justify" <?= $text_align == 'Justify' ? 'selected' : '' ?>>Justify</option>
+            <option value="left" <?= $text_align == 'left' ? 'selected' : '' ?>>Left</option>
+            <option value="right" <?= $text_align == 'right' ? 'selected' : '' ?>>Right</option>
+            <option value="center" <?= $text_align == 'center' ? 'selected' : '' ?>>Center</option>
+            <option value="justify" <?= $text_align == 'justify' ? 'selected' : '' ?>>Justify</option>
 
         </select>
         <br>
@@ -41,9 +41,9 @@
         <label>Font-Family: </label> 
         <select name="font-family">
             <option>-- Pilih Font Family --</option>
-            <option value="Arial" <?= $font_family == 'Arial' ? 'selected' : '' ?>>Arial</option>
-            <option value="Tahoma" <?= $font_family == 'Tahoma' ? 'selected' : '' ?>>Tahoma</option>
-            <option value="Calibri" <?= $font_family == 'Calibri' ? 'selected' : '' ?>>Calibri</option>
+            <option value="arial" <?= $font_family == 'arial' ? 'selected' : '' ?>>Arial</option>
+            <option value="tahoma" <?= $font_family == 'tahoma' ? 'selected' : '' ?>>Tahoma</option>
+            <option value="calibri" <?= $font_family == 'calibri' ? 'selected' : '' ?>>Calibri</option>
         </select>   
         <br>
         <br>

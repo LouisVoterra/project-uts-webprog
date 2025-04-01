@@ -11,5 +11,6 @@
     
     <button onclick="location.href='hasil.php'">Lihat Hasil</button>
     <button onclick="location.href='setting.php'">Lihat Setting</button>
+   
 </body>
 </html>
