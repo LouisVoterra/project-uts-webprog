@@ -3,9 +3,9 @@ $text_align = $_COOKIE['text-align'] ?? 'left';
 $font_family = $_COOKIE['font-family'] ?? 'arial';
 $color = $_COOKIE['color'] ?? '#000000';
 $tampilan = "p {
-text-align: $text_align; 
-font-family: $font_family; 
-color: $color;      
+    text-align: $text_align; 
+    font-family: $font_family; 
+    color: $color;      
 }";
 $css = "text-align: $text_align; font-family: $font_family; color: $color;";
 
