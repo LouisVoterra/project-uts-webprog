@@ -1,13 +1,20 @@
 <?php
-$text_align = $_COOKIE['text-align'] ?? 'left';
-$font_family = $_COOKIE['font-family'] ?? 'arial';
-$color = $_COOKIE['color'] ?? '#000000';
-$tampilan = "p {
-    text-align: $text_align; 
-    font-family: $font_family; 
-    color: $color;      
-}";
-$css = "text-align: $text_align; font-family: $font_family; color: $color;";
+$text_align = $_COOKIE['text-align'] ?? null;
+$font_family = $_COOKIE['font-family'] ?? null;
+$color = $_COOKIE['color'] ?? null;
+
+if($text_align && $font_family && $color){
+    $tampilan = "p {
+        text-align: $text_align; 
+        font-family: $font_family; 
+        color: $color;      
+    }";
+    $css = "text-align: $text_align; font-family: $font_family; color: $color;";
+}
+else{
+    $tampilan = "";
+    $css = "text-align: $text_align; font-family: $font_family; color: $color;";
+}
 
 ?>
 
