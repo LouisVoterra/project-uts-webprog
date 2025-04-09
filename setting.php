@@ -15,10 +15,35 @@
             header("Location: index.php");
             exit();
         }
+        
         //membaca cookie, kemudian disimpan ke variabel masing"
-        $text_align = isset($_COOKIE["text-align"]) ? $_COOKIE["text-align"] : "";
-        $font_family = isset($_COOKIE["font-family"]) ? $_COOKIE["font-family"] : "";
-        $color = isset($_COOKIE["color"]) ? $_COOKIE["color"] : "#000000"; // Default warna hitam jika tidak ada cookie
+        // $text_align = isset($_COOKIE["text-align"]) ? $_COOKIE["text-align"] : "";
+        // $font_family = isset($_COOKIE["font-family"]) ? $_COOKIE["font-family"] : "";
+        // $color = isset($_COOKIE["color"]) ? $_COOKIE["color"] : "#000000"; // Default warna hitam jika tidak ada cookie
+
+        if(isset($_COOKIE["text-align"])){
+            $text_align = $_COOKIE["text-align"];
+        }
+        else{
+            $text_align = "";
+        }
+
+        if(isset($_COOKIE["font-family"])){
+            $font_family = $_COOKIE["font-family"];
+        }
+        else{
+            $font_family = "";
+        }
+
+        if(isset($_COOKIE["color"])){
+            $color = $_COOKIE["color"];
+        }
+        else{
+            $color = "";
+        }
+
+        
+        
 
     ?>
 

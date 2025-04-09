@@ -1,7 +1,30 @@
 <?php
-$text_align = $_COOKIE['text-align'] ?? null;
-$font_family = $_COOKIE['font-family'] ?? null;
-$color = $_COOKIE['color'] ?? null;
+// $text_align = $_COOKIE['text-align'] ?? null;
+// $font_family = $_COOKIE['font-family'] ?? null;
+// $color = $_COOKIE['color'] ?? null;
+
+
+if(isset($_COOKIE["text-align"])){
+    $text_align = $_COOKIE["text-align"];
+}
+else{
+    $text_align = "";
+}
+
+if(isset($_COOKIE["font-family"])){
+    $font_family = $_COOKIE["font-family"];
+}
+else{
+    $font_family = "";
+}
+
+if(isset($_COOKIE["color"])){
+    $color = $_COOKIE["color"];
+}
+else{
+    $color = "";
+}
+
 
 if($text_align && $font_family && $color){
     $tampilan = "p {
