@@ -85,7 +85,7 @@
         <br>
         <label>Font-Family: </label>    
         <select name="font-family">
-            <option value="times new roman" <?php if($font_family ==''){echo 'selected';}?>>-- Pilih Font Family --</option>
+            <option value="arial" <?php if($font_family ==''){echo 'selected';}?>>-- Pilih Font Family --</option>
             <option value="arial" <?php if($font_family =='arial'){echo 'selected';}?>>Arial</option>
             <option value="tahoma" <?php if($font_family =='tahoma'){echo 'selected';}?>>Tahoma</option>
             <option value="calibri" <?php if($font_family =='calibri'){echo 'selected';}?>>Calibri</option>
