@@ -8,14 +8,14 @@ if(isset($_COOKIE["text-align"])){
     $text_align = $_COOKIE["text-align"];
 }
 else{
-    $text_align = "";
+    $text_align = "left";
 }
 
 if(isset($_COOKIE["font-family"])){
     $font_family = $_COOKIE["font-family"];
 }
 else{
-    $font_family = "";
+    $font_family = "Times New Roman";
 }
 
 if(isset($_COOKIE["color"])){
@@ -24,6 +24,7 @@ if(isset($_COOKIE["color"])){
 else{
     $color = "";
 }
+
 
 
 if($text_align && $font_family && $color){

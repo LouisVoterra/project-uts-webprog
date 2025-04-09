@@ -9,6 +9,26 @@
     <?php
         //jika form kirim value menggunakan post, maka set cookie
         if($_SERVER["REQUEST_METHOD"]  ==  "POST"){
+            if ($_POST["text-align"] == "") {
+                $text_align = "left";
+            } else {
+                $text_align = $_POST["text-align"];
+            }
+        
+            if ($_POST["font-family"] == "") {
+                $font_family = "Times New Roman";
+            } else {
+                $font_family = $_POST["font-family"];
+            }
+        
+            if ($_POST["color"] == "") {
+                $color = "#000000";
+            } else {
+                $color = $_POST["color"];
+            }
+
+
+
             setcookie("text-align",$_POST["text-align"],time() + 3600);
             setcookie("font-family",$_POST["font-family"],time() + 3600);
             setcookie("color",$_POST["color"],time() + 3600);
@@ -54,21 +74,21 @@
     <form method ="post">
         <label>Text-align: </label> 
         <select name="text-align" id="text-align">  
-            <option>-- Pilih Text Align --</option>
-            <option value="left" <?= $text_align == 'left' ? 'selected' : '' ?>>Left</option>
-            <option value="right" <?= $text_align == 'right' ? 'selected' : '' ?>>Right</option>
-            <option value="center" <?= $text_align == 'center' ? 'selected' : '' ?>>Center</option>
-            <option value="justify" <?= $text_align == 'justify' ? 'selected' : '' ?>>Justify</option>
+            <option value="left" <?php if($text_align ==''){echo 'selected';}?>>-- Pilih Text Align --</option>
+            <option value="left" <?php if($text_align =='left'){echo 'selected';}?>>Left</option>
+            <option value="right" <?php if($text_align =='right'){echo 'selected';}?>>Right</option>
+            <option value="center" <?php if($text_align =='center'){echo 'selected';}?>>Center</option>
+            <option value="justify" <?php if($text_align =='justify'){echo 'selected';}?>>Justify</option>
 
         </select>
         <br>
         <br>
-        <label>Font-Family: </label> 
+        <label>Font-Family: </label>    
         <select name="font-family">
-            <option>-- Pilih Font Family --</option>
-            <option value="arial" <?= $font_family == 'arial' ? 'selected' : '' ?>>Arial</option>
-            <option value="tahoma" <?= $font_family == 'tahoma' ? 'selected' : '' ?>>Tahoma</option>
-            <option value="calibri" <?= $font_family == 'calibri' ? 'selected' : '' ?>>Calibri</option>
+            <option value="times new roman" <?php if($font_family ==''){echo 'selected';}?>>-- Pilih Font Family --</option>
+            <option value="arial" <?php if($font_family =='arial'){echo 'selected';}?>>Arial</option>
+            <option value="tahoma" <?php if($font_family =='tahoma'){echo 'selected';}?>>Tahoma</option>
+            <option value="calibri" <?php if($font_family =='calibri'){echo 'selected';}?>>Calibri</option>
         </select>   
         <br>
         <br>
